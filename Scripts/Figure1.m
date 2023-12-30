@@ -125,7 +125,7 @@ irf_plot(h(7),nhep);
 hold(h(7),'off')
 set(h(7),'yscale','log')
 ylabel(h(7),{'n_i (cm^{-3})'},'Interpreter','tex');
-irf_legend(h(7),{'n_{i} ','n_{H+}','n_{He++}','n_{He+}'},[0.90 0.77],'fontsize',14)
+irf_legend(h(7),{'n_{i} ','n_{H+}','n_{He2+}','n_{He+}'},[0.90 0.77],'fontsize',14)
 irf_legend(h(7),'(g)',[0.99 0.90],'color','k','fontsize',14)
 irf_zoom(h(7),'y',[1e-2 40])
 set(h(7),'ytick',[1e-2 1e-1 1e0 1e1]);
@@ -138,7 +138,7 @@ irf_plot(h(8),Vhepp.x);
 irf_plot(h(8),Vhep.x);
 hold(h(8),'off')
 ylabel(h(8),{'V_{i,x} (km s^{-1})'},'Interpreter','tex');
-irf_legend(h(8),{'V_{i} ','V_{H+}','V_{He++}','V_{He+}'},[0.90 0.94],'fontsize',14)
+irf_legend(h(8),{'V_{i} ','V_{H+}','V_{He2+}','V_{He+}'},[0.90 0.94],'fontsize',14)
 irf_legend(h(8),'(h)',[0.99 0.94],'color','k','fontsize',14)
 irf_zoom(h(8),'y',[-700 -250])
 
