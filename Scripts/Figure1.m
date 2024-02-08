@@ -57,9 +57,9 @@ set(gcf,'Position',[10 10 xSize ySize]);
 
 xwidth = 0.90;
 ywidth = 0.11;
-set(h(1),'position',[0.085 0.975-ywidth xwidth ywidth]);
-set(h(2),'position',[0.085 0.975-2*ywidth xwidth ywidth]);
-set(h(3),'position',[0.085 0.975-3*ywidth xwidth ywidth]);
+set(h(1),'position',[0.085 0.975-ywidth xwidth+0.02 ywidth]);
+set(h(2),'position',[0.085 0.975-2*ywidth xwidth+0.02 ywidth]);
+set(h(3),'position',[0.085 0.975-3*ywidth xwidth+0.02 ywidth]);
 set(h(4),'position',[0.085 0.935-4*ywidth xwidth ywidth]);
 set(h(5),'position',[0.085 0.935-5*ywidth xwidth ywidth]);
 set(h(6),'position',[0.085 0.935-6*ywidth xwidth ywidth]);
@@ -68,27 +68,27 @@ set(h(8),'position',[0.085 0.935-8*ywidth xwidth ywidth]);
 
 Bxyzmag = irf.ts_scalar(Bxyz.time,[Bxyz.data Bxyz.abs.data]);
 
-h(1)=irf_panel('Bxyz');
-irf_plot(h(1),Bxyzmag);
-ylabel(h(1),{'B (nT)'},'Interpreter','tex');
-irf_legend(h(1),{'B_{x}','B_{y}','B_{z}','|B|'},[0.70 0.7],'fontsize',14)
-irf_legend(h(1),'(a)',[0.99 0.7],'color','k','fontsize',14)
-irf_zoom(h(1),'y',[-70 80])
+h(1)=irf_panel('idist');
+irf_spectrogram(h(1),iPDistomni.specrec,'log');
+irf_legend(h(1),'(a)',[0.99 0.98],'color','k','fontsize',14);
+set(h(1),'yscale','log');
+set(h(1),'ytick',[1e1 1e2 1e3 1e4]);
+ylabel(h(1),'E_{i} (eV)','fontsize',14,'Interpreter','tex');
 title(h(1),'MMS1')
 
-h(2)=irf_panel('idist');
-irf_spectrogram(h(2),iPDistomni.specrec,'log');
+h(2)=irf_panel('edist');
+irf_spectrogram(h(2),ePDistomni.specrec,'log');
 irf_legend(h(2),'(b)',[0.99 0.98],'color','k','fontsize',14);
 set(h(2),'yscale','log');
 set(h(2),'ytick',[1e1 1e2 1e3 1e4]);
-ylabel(h(2),'E_{i} (eV)','fontsize',14,'Interpreter','tex');
+ylabel(h(2),'E_{e} (eV)','fontsize',14,'Interpreter','tex');
 
-h(3)=irf_panel('edist');
-irf_spectrogram(h(3),ePDistomni.specrec,'log');
-irf_legend(h(3),'(c)',[0.99 0.98],'color','k','fontsize',14);
-set(h(3),'yscale','log');
-set(h(3),'ytick',[1e1 1e2 1e3 1e4]);
-ylabel(h(3),'E_{e} (eV)','fontsize',14,'Interpreter','tex');
+h(3)=irf_panel('Bxyz');
+irf_plot(h(3),Bxyzmag);
+ylabel(h(3),{'B (nT)'},'Interpreter','tex');
+irf_legend(h(3),{'B_{x}','B_{y}','B_{z}','|B|'},[0.70 0.7],'fontsize',14)
+irf_legend(h(3),'(c)',[0.99 0.7],'color','k','fontsize',14)
+irf_zoom(h(3),'y',[-70 80])
 
 irf_plot_axis_align(h(1:3));
 irf_zoom(h(1:3),'x',Tint);
@@ -145,8 +145,8 @@ irf_zoom(h(8),'y',[-700 -250])
 irf_plot_axis_align(h(4:8));
 irf_zoom(h(4:8),'x',Tints);
 
+colormap(h(1),'jet');
 colormap(h(2),'jet');
-colormap(h(3),'jet');
 colormap(h(5),'jet');
 colormap(h(6),'jet');
 
