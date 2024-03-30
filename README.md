@@ -1,5 +1,8 @@
 # ShockIonDynamics
-Scripts required to generate Figures and model data from the paper "Ion Dynamics Across a Low Mach Number Bow Shock" by D. B. Graham et al. https://arxiv.org/abs/2311.11373. 
+Scripts required to generate Figures and model data from the paper "Ion Dynamics Across a Low Mach Number Bow Shock" by D. B. Graham et al. 
+Full citation: Graham, D. B., Khotyaintsev, Y. V., Dimmock, A. P., Lalti, A., Boldú, J. J., Tigik, S. F., & Fuselier, S. A. (2024). Ion dynamics across a low Mach number bow shock. Journal of Geophysical Research: Space Physics, 129, e2023JA032296. https://doi.org/10.1029/2023JA032296
+
+See also https://arxiv.org/abs/2311.11373. 
 
 # Abstract
 A thorough understanding of collisionless shocks requires knowledge of how different ion species are accelerated across the shock. We investigate a bow shock crossing using the Magnetospheric Multiscale spacecraft after a coronal mass ejection crossed Earth, which led to solar wind consisting of protons, alpha particles, and singly charge helium ions. The three species are resolved upstream of the shock. The low Mach number of the bow shock enabled the ions to be partly distinguished downstream of the shock due to the relatively low ion heating. Some of the protons are specularly reflected and produce quasi-periodic fine structures in the velocity distribution functions downstream of the shock. Heavier ions are shown to transit the shock without reflection. However, the gyromotion of the heavier ions partially obscures the fine structure of proton distributions. Additionally, the calculated proton moments are unreliable when the different ion species are not distinguished by the particle detector. The need for high time-resolution mass-resolving ion detectors when investigating collisionless shocks is discussed. 
